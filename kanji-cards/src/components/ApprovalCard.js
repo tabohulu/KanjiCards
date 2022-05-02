@@ -1,8 +1,12 @@
 import React from "react";
 
+const saveCard = (e) => {
+  e.preventDefault();
+  console.log(e);
+};
 const ApprovalCard = (props) => {
   return (
-    <form className="ui centered card">
+    <form onSubmit={saveCard} className="ui centered card">
       <div className="content">{props.children}</div>
       <div className="extra content">
         <div className="ui two buttons">
